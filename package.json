@@ -4,7 +4,9 @@
   "description": "restapi for postgresql",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx nodemon ./callrestapi.js"
+
   },
   "keywords": [
     "api",
@@ -16,7 +18,6 @@
     "cors": "^2.8.5",
     "dotenv": "^8.0.0",
     "express": "^4.17.1",
-    "mysql2": "^2.2.5",
     "pg": "^8.10.0",
     "pg-hstore": "^2.3.3",
     "sequelize": "^5.12.3"
