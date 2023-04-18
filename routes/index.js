@@ -6,6 +6,6 @@ const router = Router();
 router.get('/', (req, res) => res.send ('Bienvenido'))
 
 router.post('/users', controllers.createUser);
-router.get('./users', controllers.getAllUsers);
+router.get('/users', controllers.getAllUsers);
 
 module.exports = router;

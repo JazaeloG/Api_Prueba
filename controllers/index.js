@@ -2,7 +2,7 @@ const models = require("../database/models");
 
 const createUser = async (req, res) => {
   try{
-     const user = await models.User.create(req.body);
+     const user = await models.user.create(req.body);
      return res.status(201).json({
         user
     });
@@ -14,7 +14,7 @@ const createUser = async (req, res) => {
 const getAllUsers = async (req, res) => {
   console.log('Obteniendo Usuarios');
   try {
-    const users = await models.User.findAll({
+    const users = await models.user.findAll({
       include: [
         ]
     });
