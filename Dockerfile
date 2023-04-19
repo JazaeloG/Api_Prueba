@@ -1,10 +1,9 @@
-FROM debian:jessie
+FROM debian:buster
 
-RUN apt-get update
-
-RUN apt-get install -y curl make g++
-
-RUN curl -sL https://deb.nodesource.com/setup_10.x | bash-RUN apt-get install -y nodejs
+RUN apt-get update \
+  && apt-get install -y curl make g++ \
+  && curl -sL https://deb.nodesource.com/setup_10.x | bash - \
+  && apt-get install -y nodejs
 
 ADD package.json /package.json
 RUN npm install
@@ -12,4 +11,4 @@ RUN npm install
 WORKDIR /src
 EXPOSE 3300
 
-CMD ["node", "/src/index.js"] 
+CMD ["node", "/index.js"]
